@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta name="description" content="Fancy text generator">
+  <meta name="keywords" content="Fancy text,ranjan,web,text">
+  <meta name="author" content="Ranjan Kashyap">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Fancy text">
+  <meta property="og:description" content="Fancy text generator website developed by Ranjan">
+  <meta property="og:url" content="https://fancyfont.ranjankashyap1.repl.co">
+  <meta property="og:type" content="website">
+  <link rel="image_src" href="https://i.ibb.co/3vks15F/Firefly-fancy-text-generator-website-30189.jpg">
+  <link rel="manifest" href="manifest.json" />
+  <link rel="shortcut icon" type="image/png" href="/images/icons.png">
+
+  <title>𝓕𝓪𝓷𝓬𝔂 𝓕𝓸𝓷𝓽</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <h2>Fancy Fonts</h2>
+    <div id="root"></div>
+  </header>
+  <div class="inputBox">
+    <i class="material-icons">search</i>
+    <input id="inputFont" type="text" placeholder="Enter Text" />
+
+    <div class="inputRangeBox">
+      <span><span id="px">17</span>px</span>
+      <input value="17" min="15" max="40" oninput="changeFontSize(this)" id="inputRange" type="range" class="slider" />
+    </div>
+  </div>
+  <main>
+  </main>
+  <footer>
+    <p>Some fonts my not work</p>
+  </footer>
+  <script src="https://cdn.ranjankashyap1.repl.co/profile.js"></script>
+  <script>
+    new profile("#root");
+  </script>
+  <script src="fonts.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+{
+  "name": "Ranjan kashyap",
+  "short_name": "Fancy Text",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": " #0e1525",
+  "theme_color_dark": "#000000",
+  "theme_color_light": "fff",
+  "description": "Fancy text generator made by ranjan",
+  "icons": [
+    {
+      "src": "images/icons.png",
+      "sizes": "512x512",
+      "type": "image/png"
+
+    },
+    {
+      "src": "images/icons.png",
+      "sizes": "192x192",
+      "type": "image/png"
+
+    }
+  ]
+
+}
+
+
+

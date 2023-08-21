@@ -1,0 +1,205 @@
+@import url("//fonts.googleapis.com/css?family=Google+Sans:400,500,600,700");
+@import url("//fonts.googleapis.com/css?family=Roboto+Mono:400,500");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Google Sans", Helvetica, Arial, sans-serif;
+  scroll-behavior: smooth;
+  transition: 0.2s;
+}
+:root {
+  --primaryBlue: #f3f6fc;
+  --deepBlue: #0b57d0;
+  --lightBorder: #cfcfcf;
+  --bg: white;
+  --textClr: black;
+  --insideWhite: white;
+}
+
+body {
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  background-color: var(--bg);
+  color: var(--textClr);
+}
+
+header {
+  padding: 10px;
+  width: 91%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.inputBox {
+  border: 1px solid var(--lightBorder);
+  width: 90%;
+  margin: 10px auto;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 25px;
+}
+.inputBox i {
+  padding: 10px;
+}
+.inputBox input[type="text"] {
+  padding: 15px 10px;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  border-left: 1px solid var(--lightBorder);
+  background-color: var(--bg);
+  color: var(--textClr);
+}
+.inputBox input:focus::placeholder {
+  color: var(--deepBlue);
+}
+.inputBox.sticky {
+  position: fixed;
+  top: -10px;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
+  background-color: var(--insideWhite);
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.inputRangeBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-left: 1px solid var(--lightBorder);
+  width: 60%;
+  height: 53px;
+}
+input[type="range"] {
+  width: 100%;
+}
+main {
+  width: 90%;
+  margin: 15px auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  background-color: var(--primaryBlue);
+  border-radius: 25px;
+  padding: 10px;
+  margin-top: 20px;
+}
+main .font_box {
+  padding: 10px;
+  border-radius: 25px;
+  background-color: var(--insideWhite);
+  width: 100%;
+}
+main .font_box h3 {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.5rem;
+  letter-spacing: normal;
+  padding: 5px;
+}
+main .font_box .tools {
+  display: flex;
+  align-items: flex-end;
+  justify-content: end;
+  margin-top: 8px;
+  gap: 5px;
+}
+
+main .font_box .tools i {
+  font-size: 17px;
+  width: 35px;
+  height: 35px;
+  display: grid;
+  place-items: center;
+  border-radius: 7px;
+  cursor: pointer;
+  border: 1px solid var(--lightBorder);
+  color: var(--deepBlue);
+  font-weight: 400;
+}
+main .font_box .tools i:hover {
+  background-color: var(--deepBlue);
+  color: white;
+}
+body::-webkit-scrollbar {
+  width: 0.4em;
+  height: 0.4em;
+  background-color: var(--primaryBlue);
+}
+
+body::-webkit-scrollbar-track {
+  background-color: var(--primaryBlue);
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--lightBorder);
+  border-radius: 10px;
+}
+
+.slider {
+  appearance: none;
+  width: 100%;
+  height: 15px;
+  background: var(--lightBorder);
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+  border-radius: 10px;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+footer {
+  width: 100%;
+  text-align-last: center;
+  position: sticky;
+  top: 100%;
+  font-size: 12px;
+  color: gray;
+  padding: 10px;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: var(--deepBlue);
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+@media (width<=480px) {
+  .inputRangeBox {
+    display: none;
+  }
+  main .font_box .tools i:hover {
+    background-color: transparent;
+    color: var(--deepBlue);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primaryBlue: #222327;
+    --deepBlue: #68a7ff;
+    --lightBorder: #616161;
+    --bg: #000000;
+    --insideWhite: #131314;
+    --textClr: #f2f2ff;
+  }
+}
